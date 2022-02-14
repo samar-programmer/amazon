@@ -30,4 +30,9 @@ export class CartService {
     return this.http.delete<any>(this.baseUrl+"delCart" + "?bufcartid=" + bufdid+"&email="+email);
   }
 
+
+  downloadPdf(email:any){
+    return this.http.get("http://localhost:10002/amazon/api/home/generatePdf?email="+email, {responseType:'blob'});
+  }
+
 }
