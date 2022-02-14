@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  sideBarOpen=false;
   title = 'amazon';
+
+  sideBarToggler() {
+    console.log("sasi");
+    this.sideBarOpen = !this.sideBarOpen;
+  }
+
+  sideBarTogglerForAdmin(){
+    console.log("insideAdmin");
+  }
 }
